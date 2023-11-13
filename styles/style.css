@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
@@ -52,9 +52,9 @@ ol {
 
 /* Настройка блоков с контентом */
 
-.content{
+.content {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   align-items: flex-end;
   max-width: 1140px;
@@ -79,9 +79,9 @@ ol {
 
 /* Форма поиска */
 
-.search-form{
+.search-form {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   justify-content: space-between;
   align-items: start;
@@ -110,10 +110,10 @@ ol {
 
 .search-form__textfield {
   min-width: 240px;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.7);
   border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   background-color: transparent;
   font-size: 18px;
   font-style: normal;
@@ -130,15 +130,16 @@ ol {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
   margin-right: 5px;
 }
 
-/* Разные состояния форм*/
+/* Разные состояния форм */
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
   outline-offset: 2px;
+  border-radius: none;
 }
 
 .search-form__textfield:hover {
@@ -146,20 +147,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #FFF;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-
-.search-form__pseudo-checkbox {
-  width: 19px;
-  height: 19px;
-  outline: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox:hover {
@@ -171,16 +159,15 @@ ol {
   text-underline-offset: 2px;
 }
 
- input[type=checkbox]:checked + .search-form__pseudo-checkbox::after {
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   display: block;
-  content: '';
+  content: "";
   position: relative;
   width: 15px;
   height: 15px;
   inset: 2px;
-  background-color: #FFF;
+  background-color: #fff;
 }
-
 
 /* Кнопка*/
 
@@ -190,13 +177,13 @@ ol {
   min-height: 34px;
   justify-content: center;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 18px;
   outline: none;
   font-style: normal;
   font-weight: 700;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   background-color: transparent;
   cursor: pointer;
 }
@@ -206,7 +193,7 @@ ol {
   align-self: flex-end;
 }
 
-.button:active{
+.button:active {
   background-color: #545050;
 }
 
@@ -220,10 +207,9 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
-
 
 /* --------------------------------------------------------------------*/
 /* 2 секция*/
@@ -245,7 +231,7 @@ ol {
 }
 
 .title {
-  font-family: "Oswald", sans-serif;;
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -253,7 +239,7 @@ ol {
   text-transform: uppercase;
 }
 
-.content__accent{
+.content__accent {
   color: #545050;
 }
 
@@ -274,8 +260,12 @@ ol {
 .content__card-link {
   display: block;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   margin: 2px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 /* Карточки */
@@ -287,7 +277,15 @@ ol {
   align-items: start;
 }
 
-.content__video-card-description-container { 
+.content__video-card:focus {
+  outline: none;
+}
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content__video-card-description-container {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -296,9 +294,14 @@ ol {
   height: 100%;
 }
 
+.content__video-card-description-container:hover {
+  text-decoration: underline;
+  outline-offset: 2px;
+}
+
 .content__video-card-title {
   max-width: 200px;
-  color: #FFF;
+  color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-style: normal;
